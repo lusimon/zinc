@@ -5,7 +5,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo 'Building...'
-				git url: 'https://github.com/lusimon/zinc/tree/master/jsflab'
+				git url: 'https://github.com/lusimon/zinc.git'
 				withMaven {
           				sh "mvn clean verify"
         			} // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
